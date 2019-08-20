@@ -81,6 +81,9 @@ steps:
 #- script: chmod 777 . -R
 #  workingDirectory: $(Build.SourcesDirectory)
 
+- script: ls -l ./summary123/Cobertura.xml
+  workingDirectory: $(Build.SourcesDirectory)/TestResults/coverage
+
 - task: PublishTestResults@1
   displayName: 'Publish test results'
   inputs:
