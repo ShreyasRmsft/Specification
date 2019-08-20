@@ -81,7 +81,7 @@ steps:
 #- script: chmod 777 . -R
 #  workingDirectory: $(Build.SourcesDirectory)
 
-- script: ls -l ./summary123/Cobertura.xml
+- script: ls -l /home/vsts/work/1/s/TestResults/coverage/summary123/Cobertura.xml
   workingDirectory: $(Build.SourcesDirectory)/TestResults/coverage
 
 - task: PublishTestResults@1
