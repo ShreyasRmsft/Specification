@@ -61,13 +61,13 @@ steps:
     projects: 'tests/**/*.csproj'
     nobuild: true
 
-- task: Palmmedia.reportgenerator.reportgenerator-build-release-task.reportgenerator@4
-  displayName: ReportGenerator
-  inputs:
-    reports: '$(Build.SourcesDirectory)/tests/**/coverage.cobertura.xml'
-    targetdir: '$(Build.SourcesDirectory)/CodeCoverage'
-    reporttypes: 'HtmlInline_AzurePipelines;Cobertura;Badges'
-    assemblyfilters: '-xunit*'
+# - task: Palmmedia.reportgenerator.reportgenerator-build-release-task.reportgenerator@4
+#   displayName: ReportGenerator
+#   inputs:
+#     reports: '$(Build.SourcesDirectory)/tests/**/coverage.cobertura.xml'
+#     targetdir: '$(Build.SourcesDirectory)/CodeCoverage'
+#     reporttypes: 'HtmlInline_AzurePipelines;Cobertura;Badges'
+#     assemblyfilters: '-xunit*'
 
 # Publish the code coverage result (summary and web site)
 # The summary allows to view the coverage percentage in the summary tab
